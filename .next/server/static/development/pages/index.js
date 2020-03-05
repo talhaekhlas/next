@@ -1808,7 +1808,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "D:\\Virtunus\\next\\pages\\index.js";
+var _jsxFileName = "F:\\next\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1834,11 +1834,38 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 10
       },
       __self: this
-    }, "About Page")), __jsx("h1", {
-      align: "center",
+    }, "About Page")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/nested-page/first",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 12
+      },
+      __self: this
+    }, __jsx("a", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, "Nested page")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/dynamic-page/[slug]",
+      as: "/dynamic-page/firstd",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, __jsx("a", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, "dynamic page")), __jsx("h1", {
+      align: "center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
       },
       __self: this
     }, "I am home page"));
@@ -1857,7 +1884,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Virtunus\next\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! F:\next\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
