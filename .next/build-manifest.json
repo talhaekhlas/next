@@ -4,7 +4,7 @@
     "static/development/dll/dll_9814ef4e1ae322003944.js.map"
   ],
   "pages": {
-    "/": [
+    "/[dynamic]/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -21,11 +21,7 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/dynamic-page/firstd": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/index": [
+    "/nested-page/first": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

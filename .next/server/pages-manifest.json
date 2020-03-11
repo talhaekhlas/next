@@ -1,1 +1,1 @@
-{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/dynamic-page/firstd":"static/development/pages/dynamic-page/firstd.js","/index":"static/development/pages/index.js","/":"static/development/pages/index.js"}
+{"/[dynamic]/[id]":"static/development/pages/[dynamic]/[id].js","/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/nested-page/first":"static/development/pages/nested-page/first.js"}
