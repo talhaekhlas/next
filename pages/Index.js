@@ -4,11 +4,19 @@ import Router from 'next/router'
 
 
 class Index extends Component {
+    static async getInitialProps(ctx) {
+        // const res = await fetch('https://api.github.com/repos/zeit/next.js')
+        // const json = await res.json()
+
+        console.log(ctx)
+        return { name: 'talha' }
+      }
+
     render() {
         return (
             <div>
                 <Link href="/about">
-                    <a>About Page</a>
+        <a>About Page {this.props.name}</a>
                 </Link>
                 <span onClick={() => Router.push('/about')}> <a>Another About</a> </span>
                 <Link href="/nested-page/first">
