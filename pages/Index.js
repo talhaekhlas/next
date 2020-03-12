@@ -1,37 +1,45 @@
-import React, { Component } from 'react';
-import Link from 'next/link';
-import Router from 'next/router'
+import React from 'react';
+import {connect} from 'react-redux';
+import {decrementCounter, incrementCounter,changeName} from '../redux/actions/counterActions';
 
+class App extends React.Component {
 
-class Index extends Component {
-    static async getInitialProps(ctx) {
-        // const res = await fetch('https://api.github.com/repos/zeit/next.js')
-        // const json = await res.json()
+    static getInitialProps({store}) {}
 
-        console.log(ctx)
-        return { name: 'talha' }
-      }
+    constructor(props) {
+        super(props);
+    }
+
+    changeNameTalha = ()=>{
+        const  {dispatch} = this.props
+        console.log(dispatch)
+        // dispatch(changeName())
+        console.log('it is testing')
+    }
 
     render() {
         return (
             <div>
-                <Link href="/about">
-        <a>About Page {this.props.name}</a>
-                </Link>
-                <span onClick={() => Router.push('/about')}> <a>Another About</a> </span>
-                <Link href="/nested-page/first">
-                    <a>Nested page</a>
-                </Link>
-
-                <Link href="/dynamic-page/[slug]" as = "/dynamic-page/firstd">
-                    <a>dynamic page</a>
-                </Link>
-
-
-               <h1 align="center">I am home page</h1>
+                <button onClick={this.props.incrementCounter}>Increment</button>
+                <button onClick={this.props.decrementCounter}>Decrement</button>
+                <button onClick={this.props.changeName}>Change Name</button>
+                <button onClick={this.changeNameTalha}>Test</button>
+                <h1>{this.props.counter}</h1>
+                <h1>{this.props.name}</h1>
             </div>
         );
     }
 }
 
-export default Index;
+const mapStateToProps = state => ({
+    counter: state.counter.value,
+    name:state.counter.name
+});
+
+const mapDispatchToProps = {
+    incrementCounter: incrementCounter,
+    decrementCounter: decrementCounter,
+    changeName:changeName
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
